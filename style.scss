@@ -1,0 +1,1930 @@
+// POLICES
+@font-face {
+  font-family: "helve-bold";
+  src: url("./HelveticaNeueLTPro-Bd.eot") format("eot"),
+    url("./HelveticaNeueLTPro-Bd.otf") format("otf"),
+    url("./HelveticaNeueLTPro-Bd.ttf") format("ttf"),
+    url("./HelveticaNeueLTPro-Bd.woff") format("woff"),
+    url("./HelveticaNeueLTPro-Bd.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "helve-light";
+  src: url("./HelveticaNeueLTPro-Lt.eot") format("eot"),
+    url("./HelveticaNeueLTPro-Lt.otf") format("otf"),
+    url("./HelveticaNeueLTPro-Lt.ttf") format("ttf"),
+    url("./HelveticaNeueLTPro-Lt.woff") format("woff"),
+    url("./HelveticaNeueLTPro-Lt.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "helve-roman";
+  src: url("./HelveticaNeueLTPro-Roman.eot") format("eot"),
+    url("./HelveticaNeueLTPro-Roman.otf") format("otf"),
+    url("./HelveticaNeueLTPro-Roman.ttf") format("ttf"),
+    url("./HelveticaNeueLTPro-Roman.woff") format("woff"),
+    url("./HelveticaNeueLTPro-Roman.woff2") format("woff2");
+}
+// FIN POLICES
+
+//MEDIA QUERIES
+@mixin tablette {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin desktopsmall {
+  @media (max-width: 950px) {
+    @content;
+  }
+}
+
+@mixin mobilesmall {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mobileextrasmall {
+  @media (max-width: 680px) {
+    @content;
+  }
+}
+// FIN MEDIA QUERIES
+
+//GENERAL
+.pointer {
+  cursor: pointer;
+}
+
+.sticky {
+  position: sticky;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+.br-for-mobile {
+  display: none;
+  @include mobilesmall {
+    display: block;
+  }
+}
+
+.br-for-desktop {
+  display: block;
+  @include mobilesmall {
+    display: none;
+  }
+}
+
+.lp-clinique {
+  overflow: hidden;
+}
+// FIN GENERAL
+
+//COULEURS
+$vert: rgb(227, 245, 231);
+$vertclair: rgb(240, 254, 243);
+$jaune: rgb(244, 244, 219);
+$violet: #f8dbdb;
+$rose: rgb(251, 234, 234);
+// FIN COULEURS
+
+/////////////////////////// TOP ////////////////////////////////////
+#top-clinique {
+  background-image: url("./FOND_DESK.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 100vh;
+  max-height: 550px;
+  max-width: 100%;
+  font-family: "helve-roman";
+  position: relative;
+  @include tablette {
+    max-height: 500px;
+  }
+  @include mobilesmall {
+    max-height: 750px;
+  }
+  @include mobileextrasmall {
+    max-height: 620px;
+  }
+  //LOGO
+  .logo-position {
+    text-align: center;
+    margin: 2% auto;
+    z-index: 5;
+  }
+  .logo-size {
+    max-width: 250px; 
+    @include mobileextrasmall {
+      display: inline-block;
+      max-width: 150px;
+      margin-bottom: 20px;
+    }
+  }
+  //CONTENEUR
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    @include desktopsmall {
+      width: 96%;
+      margin-right: 2%;
+      margin-left: 2%;
+    }
+    @include mobilesmall {
+      flex-direction: column-reverse;
+    }
+  }
+  // BLOC BANC ET IMG
+  .flex-column-top-texte {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    text-align: center;
+    text-transform: uppercase; 
+    z-index:5;
+    @include tablette {
+      width: 60%;
+    }
+    @include mobilesmall {
+      width: 94%;
+      margin-left: 3%;
+      margin-right: 3%;
+      margin-bottom: 4%;
+    } 
+    // OFFRE (FOND BLANC LIGNE 2)
+    .content-top-one {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      width: 100%;
+      margin-bottom: 2%;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 1% 2%;
+      @include mobileextrasmall {
+        padding: 2% 3%;
+        margin-bottom: 4%;
+      }
+      .accroche {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        line-height: 1.1;
+        // bloc pourcentage
+        .pourcentage {
+          width: 20%; 
+          p:nth-child(1) {
+            font-size: 2.5rem;
+            font-family: "helve-bold";
+            color: black;
+            letter-spacing: 0.7px;
+            @include mobileextrasmall {
+              font-size: 1.5rem;
+            }
+          }
+          p:nth-child(2) {
+            font-size: 0.7rem;
+            font-family: "helve-light";
+            color: black;
+            @include mobileextrasmall {
+              font-size: 0.6rem;
+            }
+          }
+        }
+        // plus
+        .plus {
+          width: 10%;
+          width: auto;
+          font-size: 4rem;
+          font-family: "helve-roman";
+          color: black;
+          @include mobilesmall {
+            font-size: 2rem;
+          } 
+        } 
+        // bloc offre
+        .offre-clinique {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          text-transform: uppercase;
+          width: 30%; 
+          p:nth-child(1) {
+            font-family: "helve-bold";
+            font-size: 1rem;
+            @include mobileextrasmall {
+              font-size: 0.8rem;
+            }
+          }
+          p:nth-child(2) {
+            font-family: "helve-bold";
+            font-size: 2rem;
+            @include mobileextrasmall {
+              font-size: 1.4rem;
+            }
+          }
+          p:nth-child(3) {
+            font-family: "helve-light";
+            font-size: 0.7rem;
+          }
+        }
+        // bloc mascara
+        .mascara {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: auto;
+          .mascara-size {
+            max-width: 35px;
+            @include mobileextrasmall {
+              max-width: 20px;
+            }
+          }
+        } 
+        // bloc livraison
+        .livraison {
+          width: 20%; 
+          p {
+            font-family: "helve-bold";
+            font-size: 1rem;
+            @include mobileextrasmall {
+              font-size: 0.8rem;
+            }
+          } 
+        }
+      }
+    }
+    // TITRE (FOND BLANC LIGNE 1)
+    .content-top-two {
+      width: 100%;
+      margin-bottom: 2%;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 1% 2%;
+      line-height: 1.2;
+      @include mobileextrasmall {
+        flex-direction: column;
+        margin-bottom: 4%;
+        padding: 2% 2%;
+      }
+      div:nth-child(1) {
+        font-size: 1.3rem;
+        font-family: "helve-light";
+        color: black;
+        text-align: center;
+        background-color: transparent;
+        span {
+          font-size: 1.3rem;
+          font-family: "helve-bold";
+          color: black;
+          margin: auto;
+          background-color: $violet;
+        }
+      }
+    }
+    // CODE (FOND BLANC LIGNE 3)
+    .content-top-three {
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 2% 2%;
+      line-height: 1.2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      div:nth-child(1) {
+        width: auto;
+        font-family: "helve-bold";
+        font-size: 0.8rem;
+        color: black;
+        background-color: $violet;
+        margin-right: 2%; 
+      }
+      div:nth-child(2) {
+        width: auto; 
+        color: black; 
+        .lp-header-offre-code { 
+          border: 1px solid black;
+          padding: 0.2rem 0.7rem;
+          font-family: "helve-roman";
+          width: 100%;
+          text-align: center;
+          vertical-align: center;
+          color: black;
+          background-color: rgba(255, 255, 255, 0.8);
+          &:hover {
+            background-color: $rose;
+            transition: background-color 1s ease 0s;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.4); 
+          } 
+          p { 
+            font-size: 1rem;
+            font-family: "helve-roman";
+            color: black; 
+            text-align: center;
+            border: none; 
+            &:hover {
+              background-color: $rose;
+              transition: background-color 1s ease 0s; 
+
+            }
+            &::selection{
+              background-color: $rose; 
+            }
+          }
+          .lp-header-copy-icon {
+            max-width: 10px;
+            transform: translate(10px, 3px);
+            padding-bottom: 2px;
+          }
+        } 
+      } 
+    }
+
+    .copie-colle {
+      font-family: "helve-roman";
+      font-size: 0.6rem;
+      text-align: center; 
+      padding-top: 0.1rem;
+      text-align: center;
+      text-transform:none;
+      @include mobilesmall {
+        display: none;
+      }
+    } 
+    .copie-colle-mobile {
+      display: none;
+      @include mobilesmall {
+        display: inline-block;
+        font-family: "helve-roman";
+        font-size: 0.6rem;
+        text-align: center; 
+        text-transform: none;
+        padding-top: 0.1rem;
+        width: 100%;
+      }
+    }
+  }
+
+  // IMG MONTAGE PRODUITS
+  .flex-column-top-visuel {
+    width: 50%; 
+    @include tablette {
+      width: 40%;
+      text-align: center;
+    }
+    @include mobilesmall {
+      width: 100%;
+      margin-top: 3%;
+    }
+    img {
+      max-width: 500px;
+      padding-left: 50px;
+      display: inline-block;
+      z-index:5;
+      @include tablette {
+        max-width: 400px;
+      }
+      @include desktopsmall {
+        max-width: 350px;
+      }
+      @include mobilesmall {
+        max-width: 300px;
+        margin-bottom: 3%;
+        padding-left: 0px;
+      }
+      @include mobileextrasmall {
+        max-width: 250px;
+      }
+    }
+  }
+  //CTA
+  .header-cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    margin-bottom: 5%; 
+    @include mobilesmall {
+      flex-direction: column;
+      margin-top: 2%;
+      margin-bottom: 2%;
+    }
+    @include mobileextrasmall {
+      margin-bottom: 4%;
+      margin-top: 4%;
+    }
+    .cta {
+      color: black;
+      background-color: $rose;
+      border: 1px solid black;
+      border-radius: 25px;
+      padding: 0.6rem 1.5rem;
+      font-family: "helve-bold";
+      font-size: 0.8rem;
+      width: 200px;
+      margin-left: 2px; 
+      z-index:5;
+      &:hover {
+        color: white;
+        background-color: black;
+        border: 1px solid white;
+        transition: background-color 1s ease 0s;
+      }
+    }
+  }
+
+  // bulles position
+  .bulle-header-one {
+    position: absolute;
+    top: -60px;
+    left: 10%;
+    max-width: 150px; 
+    @include mobilesmall{
+      top: -60px;
+      left: 1%;
+      max-width: 130px; 
+    }
+    @include mobileextrasmall {
+      top: 0;
+      left: 70%;
+      max-width: 60px;
+    }
+  }
+  .bulle-header-two {
+    position: absolute;
+    top: 20%;
+    right: 0%;
+    max-width: 130px; 
+    @include tablette {
+      max-width: 100px;
+    }
+    @include mobileextrasmall {
+     display:none;
+    }
+  }
+  .bulle-header-three {
+    position: absolute;
+    bottom: 3%;
+    left: 2%;
+    max-width: 150px;
+    z-index: 5;
+    @include tablette {
+      max-width: 100px;
+      z-index: 1;
+    }
+  }
+  .bulle-header-four {
+    position: absolute;
+    bottom: 3%;
+    right: 2%;
+    max-width: 120px;
+    z-index: 5;
+    @include tablette {
+      max-width: 100px;
+      z-index:1;
+    }
+    @include mobileextrasmall {
+      max-width: 50px; 
+    }
+  }
+  .bulle-header-mobile {
+    display: none;
+    @include mobileextrasmall {
+      display: block;
+      position: absolute;
+      top: -4%;
+      left: -2%;
+      max-width: 110px;
+    }
+  }
+}
+/////////////////////////// FIN TOP ////////////////////////////////////
+
+///////////////////////////// TITRE PRODUITS//////////////////////
+#titre-produits {
+  background-color: $violet; 
+  padding-top: 50px;
+  padding-bottom: 30px;
+  height: auto;
+  max-width: 100%;
+  position: relative;
+  @include mobilesmall {
+    padding-top: 50px;
+  }
+  @include mobileextrasmall {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  p {
+    font-size: 2rem;
+    font-family: "helve-light";
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: center;
+    margin-top: -20px;
+    margin-bottom: 2%;
+    line-height: 1.2;
+    @include mobileextrasmall {
+      font-size: 1.5rem;
+      margin-top: 10px;
+      color: black;
+    }
+    span {
+      font-family: "helve-bold";
+    }
+  }
+  .tiret {
+    background: black 0 0 no-repeat padding-box;
+    width: 25%;
+    height: 1px;
+    @include mobileextrasmall {
+      width: 15%;
+    }
+  }
+  .one {
+    position: absolute;
+    left: 0px;
+    top: 50px;
+  }
+  .two {
+    position: absolute;
+    right: 0px;
+    top: 50px;
+  }
+}
+///////////////////////////// FIN TITRE PRODUITS//////////////////////
+
+//////////////////////////MOISTURE/////////////////////////////////
+#moisture {
+  background-color: $violet;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  height: auto;
+  max-width: 100%;
+  position: relative;
+  @include mobileextrasmall {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .content-section {
+    @include mobileextrasmall {
+      flex-direction: column;
+    }
+  }
+  .titre-section,
+  .sous-titre-section,
+  .paragraphe-section {
+    text-align: left;
+    padding-right: 20%;
+    @include mobileextrasmall {
+      padding-right: 5%;
+      padding-left: 5%; 
+    }
+  }
+  .content-section-texte {
+    @include mobileextrasmall {
+      margin-top: 5%;
+    }
+  }
+  .content-section-visuel img {
+    max-width: 50%;
+    display: inline-block;
+    margin: auto;
+  }
+  .bulle-moisture {
+    position: absolute;
+    bottom: 15%;
+    right: 1%;
+    max-width: 100px;
+  }
+  .prix-section {
+    left: 16%;
+    bottom: 27%;
+    z-index: 5;
+    @include tablette {
+      left: 15%;
+    }
+    @include desktopsmall {
+      bottom: 31%;
+    }
+    @include mobileextrasmall {
+      left: 17%;
+      bottom: 55%;
+    }
+  }
+}
+//////////////////////////FIN MOISTURE/////////////////////////////////
+
+//////////////////// GEL//////////////////////////
+#gel {
+  background-color: $violet;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  height: auto;
+  max-width: 100%;
+  position: relative;
+  @include mobileextrasmall {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .content-section {
+    @include mobileextrasmall {
+      flex-direction: column-reverse;
+    }
+  }
+  .titre-section,
+  .sous-titre-section,
+  .paragraphe-section {
+    text-align: right;
+    padding-left: 20%;
+    @include mobileextrasmall {
+      text-align: left;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+  }
+  .content-section-texte {
+    @include mobileextrasmall {
+      margin-top: 13%;
+    }
+  }
+  .content-section-visuel img {
+    @include mobileextrasmall {
+      margin-left: 30%;
+    }
+  }
+  .chiffres-section {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+    @include mobileextrasmall {
+      justify-content: center;
+    }
+  }
+  .prix-section {
+    right: 39%;
+    bottom: 5%;
+    z-index: 5;
+    @include tablette {
+      right: 38%;
+      bottom: 4%;
+    }
+    @include desktopsmall {
+      right: 38%;
+      bottom: 8%;
+    }
+    @include mobileextrasmall {
+      left: 12%;
+      bottom: 43%;
+    }
+  }
+  .bulle-gel {
+    position: absolute;
+    bottom: 15%;
+    left: 0%;
+    max-width: 150px;
+  }
+  .cta-section {
+    display: flex;
+    justify-content: flex-end;
+    @include mobileextrasmall {
+      justify-content: center;
+    }
+  }
+}
+//////////////////// FIN GEL//////////////////////////
+
+///////////////////////////// SMART /////////////////////////////
+#smart {
+  background-color: $violet;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  height: auto;
+  max-width: 100%;
+  position: relative;
+  @include mobileextrasmall {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .content-section-texte {
+    @include mobileextrasmall {
+      margin-top: 5%;
+    }
+  }
+  .titre-section,
+  .sous-titre-section,
+  .paragraphe-section {
+    text-align: left;
+    padding-right: 20%;
+    @include mobileextrasmall {
+      padding-right: 5%;
+      padding-left: 5%; 
+    }
+  }
+  .prix-section {
+    left: 13%;
+    bottom: 15%;
+    z-index: 5;
+    @include tablette {
+      left: 13%;
+      bottom: 20%;
+    }
+    @include mobileextrasmall {
+      left: 17%;
+      bottom: 50%;
+    }
+  }
+  .bulle-smart {
+    position: absolute;
+    bottom: 20%;
+    right: 1%;
+    max-width: 120px;
+  }
+  .content-section-visuel img {
+    @include mobileextrasmall {
+      margin-left: 25%;
+    }
+  }
+}
+///////////////////////////// FIN SMART /////////////////////////////
+
+////////////////////////////////// EYES //////////////////////////////
+#eyes {
+  background-color: $violet;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  height: auto;
+  max-width: 100%;
+  position: relative;
+  @include mobileextrasmall {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .titre-section,
+  .sous-titre-section,
+  .paragraphe-section {
+    text-align: right;
+    padding-left: 20%;
+    @include mobileextrasmall {
+      text-align: left;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+  }
+  .content-section {
+    @include mobileextrasmall {
+      flex-direction: column-reverse;
+    }
+  }
+  .content-section-texte {
+    @include mobileextrasmall {
+      margin-top: 5%;
+    }
+  }
+  .chiffres-section {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+    @include mobileextrasmall {
+      justify-content: center;
+    }
+  }
+  .prix-section {
+    right: 18%;
+    bottom: 20%;
+    z-index: 5;
+    @include tablette {
+      right: 14%;
+      bottom: 22%;
+    }
+    @include mobileextrasmall {
+      right: 17%;
+      top: 8%;
+    }
+  }
+  .cta-section {
+    display: flex;
+    justify-content: flex-end;
+    @include mobileextrasmall {
+      justify-content: center;
+    }
+  }
+  .content-section-visuel img {
+    max-width: 60%;
+    display: inline-block;
+    margin-left: -10%;
+  }
+  .bulle-eyes {
+    position: absolute;
+    left: 1%;
+    bottom: 50%;
+    max-width: 150px;
+    @include mobileextrasmall {
+      right: 1%;
+      bottom: 15%;
+      max-width: 120px;
+    }
+  }
+}
+////////////////////////////////// FIN EYES //////////////////////////////
+
+////////////////////structure présentation produits////////////////////////
+.content-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin-right: 10%;
+  margin-left: 10%;
+  color: black;
+  @include mobilesmall {
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+  @include mobileextrasmall {
+    flex-direction: column;
+  }
+}
+.content-section-visuel,
+.content-section-texte {
+  width: 50%;
+  z-index: 5;
+  @include mobileextrasmall {
+    width: 100%;
+  }
+}
+.content-section-visuel {
+  text-align: center;
+}
+.content-section-visuel img {
+  max-width: 70%;
+  display: block;
+  margin: auto;
+}
+.titre-section {
+  font-family: "helve-bold";
+  font-size: 2rem;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  @include mobileextrasmall {
+    display: none;
+  }
+}
+.titre-section-mobile {
+  display: none;
+  @include mobileextrasmall {
+    display: block;
+    width: 100%;
+    font-family: "helve-bold";
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-size: 1.5rem;
+    line-height: 1.1;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+  }
+}
+.sous-titre-section {
+  font-family: "helve-bold";
+  font-size: 1rem;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+.paragraphe-section {
+  font-family: "helve-light";
+  font-size: 1rem;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+.chiffres-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+  @include mobileextrasmall {
+    justify-content: center;
+  }
+}
+.note-section {
+  padding-right: 30px;
+  line-height: 1;
+}
+.reco-section {
+  line-height: 1;
+}
+.note-section p:nth-child(1),
+.reco-section p:nth-child(2) {
+  text-transform: uppercase;
+  font-family: "helve-light";
+  font-size: 0.7rem;
+  text-align: center;
+}
+.note-section p:nth-child(2),
+.reco-section p:nth-child(1) {
+  text-transform: uppercase;
+  font-family: "helve-bold";
+  font-size: 1.6rem;
+  text-align: center;
+}
+.prix-section {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin: auto;
+  text-align: center;
+  vertical-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.prix-valable-section {
+  font-family: "helve-bold";
+  font-size: 1rem;
+  line-height: 1.2;
+}
+.prix-barre-section {
+  font-family: "helve-light";
+  font-size: 0.8rem;
+  text-decoration: line-through;
+  line-height: 1.2;
+}
+.cta-section {
+  display: inline-block;
+  text-align: left;
+  @include mobileextrasmall {
+    display: block;
+    text-align: center;
+  }
+}
+.cta-section a {
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  border: 1px solid black;
+  background-color: $rose;
+  border-radius: 25px;
+  padding: 0.5rem 1.3rem;
+  font-family: "helve-bold";
+  font-size: 0.8rem;
+  width: 200px;
+  &:hover {
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    transition: background-color 1s ease 0s;
+  }
+}
+
+////////// FIN PRESENTATION DES PRODUITS /////////////////////////
+
+//////////////////////////////////MASCARA/////////////////////////////////
+#mascara {
+  background-color: $vert;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  height: auto;
+  max-width: 100%;
+  position: relative;
+  @include mobileextrasmall {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .tiret {
+    background: black 0 0 no-repeat padding-box;
+    width: 25%;
+    height: 1px;
+    @include mobileextrasmall {
+      width: 10%;
+    }
+  }
+  .one {
+    position: absolute;
+    left: 0%;
+    top: 50px;
+  }
+  .two {
+    position: absolute;
+    right: 0%;
+    top: 50px;
+  }
+  .titre-texte {
+    text-align: center;
+    margin-top: -2%;
+    margin-bottom: 2%;
+    line-height: 1.2;
+    @include mobileextrasmall {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    p:nth-child(1) {
+      font-size: 2rem;
+      font-family: "helve-light";
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      @include mobileextrasmall {
+        font-size: 1.5rem;
+        margin-top: 0px;
+      }
+      span {
+        font-family: "helve-bold";
+      }
+    }
+    p:nth-child(2) {
+      font-size: 1.3rem;
+      font-family: "helve-light";
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      @include mobileextrasmall {
+        font-size: 1rem;
+      }
+    }
+    p:nth-child(3) {
+      font-size: 1.2rem;
+      font-family: "helve-bold";
+      @include mobileextrasmall {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .mascara-presentation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    @include mobileextrasmall {
+      flex-wrap: wrap;
+    }
+    .item-one {
+      width: 35%;
+      @include mobileextrasmall {
+        width: 50%;
+      }
+      img {
+        width: 100%;
+        display: block;
+        text-align: right;
+      }
+    }
+    .item-two {
+      width: 30%;
+      padding-left: 30px;
+      padding-right: 30px;
+      @include mobilesmall {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      @include mobileextrasmall {
+        width: 50%;
+      }
+      figure {
+        text-align: center;
+        margin: auto;
+      }
+      figure img {
+        max-width: 100px;
+        text-align: center;
+        @include mobileextrasmall {
+          max-width: 65px;
+        }
+      }
+      figcaption {
+        text-align: center;
+        padding: 5px;
+        text-transform: uppercase;
+      }
+      .for-desktop {
+        @include mobileextrasmall {
+          display: none;
+        }
+      }
+    }
+    .item-three {
+      width: 35%;
+      @include mobileextrasmall {
+        display: none;
+      }
+      p {
+        font-family: "helve-light";
+        font-size: 1rem;
+        line-height: 1.3;
+        margin-bottom: 20px;
+        padding-right: 20%;
+        @include mobilesmall {
+          padding-right: 0%;
+        }
+      }
+    }
+  }
+  .for-mobile {
+    display: none;
+    @include mobileextrasmall {
+      display: block;
+
+      width: 100%;
+      text-align: center;
+      padding: 5px;
+      text-transform: uppercase;
+      font-size: 1rem;
+      margin-top: 2%;
+      margin-bottom: 2%;
+    }
+  }
+  .item-three-mobile-slider {
+    display: none;
+    @include mobileextrasmall {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      font-family: "helve-light";
+      font-size: 1rem;
+      line-height: 1.3;
+      padding-right: 4%;
+      padding-left: 4%;
+    }
+  }
+  .slick-dots {
+    width: 92% !important;
+  }
+
+  .cta-position {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    a {
+      display: inline-block;
+      text-align: center;
+      text-transform: uppercase;
+      border: 1px solid black;
+      background-color: $vertclair;
+      border-radius: 25px;
+      padding: 0.5rem 1.5rem;
+      font-family: "helve-bold";
+      font-size: 0.8rem;
+      width: 200px;
+      &:hover {
+        color: white;
+        background-color: black;
+        border: 1px solid white;
+        transition: background-color 1s ease 0s;
+      }
+    }
+  }
+}
+////////////////////////////////// FIN MASCARA/////////////////////////////////
+
+//////////////////////////// CONDITIONS///////////////////////////////////
+#conditions {
+  background-color: $violet;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  max-height: auto;
+  max-width: 100%;
+  position: relative;
+  .conditions-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin-left: 35%;
+    margin-right: 25%;
+    @include mobileextrasmall {
+      width: 90%;
+      margin-left: 5%;
+      margin-right: 5%;
+      justify-content: space-between;
+    }
+  }
+  .conditions-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 100%;
+    @include mobileextrasmall {
+      width: 90%;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+    img {
+      max-width: 100%;
+      @include mobileextrasmall {
+        max-width: 50px;
+        display: inline-block;
+        text-align: right;
+      }
+    }
+  }
+
+  .conditions-item:nth-child(3) {
+    margin-bottom: 0px;
+  }
+
+  .icone {
+    width: 20%;
+    @include mobileextrasmall {
+      width: 30%;
+      text-align: left;
+    }
+  }
+  .texte-conditions {
+    width: 40%;
+    margin-right: 40%;
+    @include mobileextrasmall {
+      width: 70%;
+      text-align: left;
+      margin-right: 0%;
+    }
+    p:nth-child(1) {
+      font-size: 1rem;
+      font-family: "helve-bold";
+      text-transform: uppercase;
+      @include mobileextrasmall {
+        font-size: 0.8rem;
+        margin-top: 10px;
+        display: inline-block;
+      }
+    }
+    p:nth-child(2) {
+      font-size: 1rem;
+      font-family: "helve-light";
+      text-transform: uppercase;
+      @include mobileextrasmall {
+        font-size: 0.8rem;
+        display: inline-block;
+      }
+    }
+  }
+}
+//////////////////////////// FIN CONDITIONS///////////////////////////////////
+
+///////////////////////////////BANDEAU////////////////////////////////////
+#bandeau-clinique {
+  width: 100%;
+  background-color: $jaune;
+  line-height: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  @include mobileextrasmall {
+    max-height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .content-bandeau {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    @include desktopsmall {
+      width: 90%;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+    @include mobilesmall {
+      width: 96%;
+      margin-left: 2%;
+      margin-right: 2%;
+      justify-content: space-between;
+    }
+    @include mobileextrasmall {
+      flex-direction: column;
+    }
+  }
+
+  .content-bandeau-one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    @include mobilesmall {
+      width: 55%;
+      justify-content: flex-start;
+    }
+    @include mobileextrasmall {
+      width: 96%;
+      margin-left: 2%;
+      margin-right: 2%;
+      justify-content: center;
+    }
+    .pourcentage {
+      width: auto;
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 1.1;
+      padding-left: 5px;
+      padding-right: 5px;
+      p:nth-child(1) {
+        font-size: 2rem;
+        font-family: "helve-roman";
+        color: black;
+        letter-spacing: 0.7px;
+        @include mobilesmall {
+          font-size: 1rem;
+        }
+      }
+      p:nth-child(2) {
+        font-size: 0.7rem;
+        font-family: "helve-light";
+        color: black;
+        @include mobilesmall {
+          font-size: 0.6rem;
+        }
+      }
+    }
+    .plus {
+      width: auto;
+      font-size: 4rem;
+      font-family: "helve-light";
+      color: black;
+      line-height: 1.3;
+      padding-left: 5px;
+      padding-right: 5px;
+      @include mobilesmall {
+        font-size: 2rem;
+      }
+    }
+    .offre-clinique {
+      width: auto;
+      text-transform: uppercase;
+      line-height: 1.1;
+      text-align: center;
+      padding-left: 5px;
+      padding-right: 5px;
+      .offre-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .offre-column {
+        display: flex;
+        flex-direction: column;
+      }
+      p:nth-child(1) {
+        font-family: "helve-bold";
+        font-size: 1rem;
+        @include mobilesmall {
+          font-size: 0.8rem;
+        }
+      }
+      p:nth-child(2) {
+        font-family: "helve-bold";
+        font-size: 1.7rem;
+        @include mobilesmall {
+          font-size: 1.2rem;
+        }
+      }
+      p:nth-child(3) {
+        font-family: "helve-light";
+        font-size: 0.7rem;
+        @include mobilesmall {
+          font-size: 0.6rem;
+        }
+      }
+      img {
+        max-width: 25px;
+        display: inline-block;
+        margin-left: 10px;
+        margin-bottom: 20px;
+        @include mobilesmall {
+          max-width: 15px;
+          margin-bottom: 0px;
+        }
+      }
+    }
+    .livraison {
+      width: auto;
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 1.3;
+      padding-left: 5px;
+      padding-right: 5px;
+      p {
+        font-family: "helve-bold";
+        font-size: 1rem;
+        @include mobilesmall {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+
+  .content-bandeau-two {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    @include mobilesmall {
+      width: 45%;
+      justify-content: flex-start;
+    }
+    @include mobileextrasmall {
+      width: 96%;
+      margin-right: 2%;
+      margin-left: 2%;
+      margin-top: 5px;
+    }
+    .code {
+      width: 50%;
+      text-align: center;
+      line-height: 1.3;
+      @include mobileextrasmall {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        text-align: center;
+      }
+      p:nth-child(1) {
+        font-size: 0.8rem;
+        font-family: "helve-bold";
+        color: black;
+        @include mobileextrasmall {
+          margin-right: 0.5rem;
+        }
+      }
+      p:nth-child(2) {
+        display: inline-block;
+        text-transform: uppercase;
+        background-color: $violet;
+        font-size: 1.3rem;
+        font-family: "helve-roman";
+        color: black;
+        padding: 0px 3px;
+        @include mobilesmall {
+          display: inline;
+          font-size: 1rem;
+        }
+      }
+    }
+    .cta {
+      width: 50%;
+      line-height: 1.3;
+      @include mobileextrasmall {
+        display: none;
+      }
+      a {
+        display: inline-block;
+        text-align: center;
+        text-transform: uppercase;
+        border: 1px solid black;
+        background-color: $jaune;
+        border-radius: 25px;
+        padding: 0.5rem 2rem;
+        font-family: "helve-bold";
+        font-size: 0.8rem;
+        &:hover {
+          border: 1px solid white;
+          color: white;
+          background-color: black;
+          transition: background-color 1s ease 0s;
+        }
+      }
+    }
+    .chevron {
+      display: none;
+      @include mobileextrasmall {
+        display: block;
+        width: 10%;
+        text-align: right;
+        img {
+          max-width: 30px;
+        }
+      }
+    }
+  }
+}
+///////////////////////////////FIN BANDEAU////////////////////////////////////
+
+//////////////////////////////////LOGOS/////////////////////////////////////////
+#logos {
+  background-color: white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  max-height: auto;
+  max-width: 100%;
+  .flex-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .flex-logos img {
+    display: block;
+  }
+  .flex-logos img:nth-child(1) {
+    max-width: 100px;
+    margin-right: -20px;
+    @include mobileextrasmall {
+      max-width: 70px;
+    }
+  }
+  .flex-logos img:nth-child(2) {
+    max-width: 230px;
+    margin-top: -20px;
+    @include mobileextrasmall {
+      max-width: 200px;
+      margin-top: -10px;
+    }
+  }
+  .ml {
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.6rem;
+    font-family: "helve-roman";
+  }
+  a {
+    text-decoration: underline;
+  }
+}
+//////////////////////////////////FIN LOGOS/////////////////////////////////////////
+
+// ANIMATIONS
+.rotateIn {
+  animation-name: rotateIn;
+  animation-duration: 15s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotateIn {
+  0% {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotate3d(0, 0, 1, -200deg);
+    transform: rotate3d(0, 0, 1, -200deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.bulle-gauche {
+  animation: bulleGauche linear 10s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+  -webkit-animation: bulleGauche linear 10s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-transform-origin: 50% 50%;
+  -moz-animation: bulleGauche linear 10s;
+  -moz-animation-iteration-count: infinite;
+  -moz-transform-origin: 50% 50%;
+  -o-animation: bulleGauche linear 10s;
+  -o-animation-iteration-count: infinite;
+  -o-transform-origin: 50% 50%;
+  -ms-animation: bulleGauche linear 10s;
+  -ms-animation-iteration-count: infinite;
+  -ms-transform-origin: 50% 50%;
+}
+
+@keyframes bulleGauche {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  37% {
+    transform: translate(98px, -13px) rotate(67deg);
+  }
+  61% {
+    transform: translate(69px, -60px) rotate(110deg);
+  }
+  78% {
+    transform: translate(8px, -26px) rotate(140deg);
+  }
+  100% {
+    transform: translate(8px, -28px) rotate(180deg);
+  }
+}
+
+@-moz-keyframes bulleGauche {
+  0% {
+    -moz-transform: translate(0px, 0px) rotate(0deg);
+  }
+  37% {
+    -moz-transform: translate(98px, -13px) rotate(67deg);
+  }
+  61% {
+    -moz-transform: translate(69px, -60px) rotate(110deg);
+  }
+  78% {
+    -moz-transform: translate(8px, -26px) rotate(140deg);
+  }
+  100% {
+    -moz-transform: translate(8px, -28px) rotate(180deg);
+  }
+}
+
+@-webkit-keyframes bulleGauche {
+  0% {
+    -webkit-transform: translate(0px, 0px) rotate(0deg);
+  }
+  37% {
+    -webkit-transform: translate(98px, -13px) rotate(67deg);
+  }
+  61% {
+    -webkit-transform: translate(69px, -60px) rotate(110deg);
+  }
+  78% {
+    -webkit-transform: translate(8px, -26px) rotate(140deg);
+  }
+  100% {
+    -webkit-transform: translate(8px, -28px) rotate(180deg);
+  }
+}
+
+@-o-keyframes bulleGauche {
+  0% {
+    -o-transform: translate(0px, 0px) rotate(0deg);
+  }
+  37% {
+    -o-transform: translate(98px, -13px) rotate(67deg);
+  }
+  61% {
+    -o-transform: translate(69px, -60px) rotate(110deg);
+  }
+  78% {
+    -o-transform: translate(8px, -26px) rotate(140deg);
+  }
+  100% {
+    -o-transform: translate(8px, -28px) rotate(180deg);
+  }
+}
+
+@-ms-keyframes bulleGauche {
+  0% {
+    -ms-transform: translate(0px, 0px) rotate(0deg);
+  }
+  37% {
+    -ms-transform: translate(98px, -13px) rotate(67deg);
+  }
+  61% {
+    -ms-transform: translate(69px, -60px) rotate(110deg);
+  }
+  78% {
+    -ms-transform: translate(8px, -26px) rotate(140deg);
+  }
+  100% {
+    -ms-transform: translate(8px, -28px) rotate(180deg);
+  }
+}
+
+.bulle-droite {
+  animation: bulleDroite linear 10s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+  -webkit-animation: bulleDroite linear 10s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-transform-origin: 50% 50%;
+  -moz-animation: bulleDroite linear 10s;
+  -moz-animation-iteration-count: infinite;
+  -moz-transform-origin: 50% 50%;
+  -o-animation: bulleDroite linear 10s;
+  -o-animation-iteration-count: infinite;
+  -o-transform-origin: 50% 50%;
+  -ms-animation: bulleDroite linear 10s;
+  -ms-animation-iteration-count: infinite;
+  -ms-transform-origin: 50% 50%;
+}
+
+@keyframes bulleDroite {
+  0% {
+    transform: translate(0px, 1px) rotate(0deg);
+  }
+  37% {
+    transform: translate(-125px, -27px) rotate(67deg);
+  }
+  61% {
+    transform: translate(-205px, 33px) rotate(110deg);
+  }
+  78% {
+    transform: translate(-142px, 56px) rotate(140deg);
+  }
+  100% {
+    transform: translate(-59px, 26px) rotate(180deg);
+  }
+}
+
+@-moz-keyframes bulleDroite {
+  0% {
+    -moz-transform: translate(0px, 1px) rotate(0deg);
+  }
+  37% {
+    -moz-transform: translate(-125px, -27px) rotate(67deg);
+  }
+  61% {
+    -moz-transform: translate(-205px, 33px) rotate(110deg);
+  }
+  78% {
+    -moz-transform: translate(-142px, 56px) rotate(140deg);
+  }
+  100% {
+    -moz-transform: translate(-59px, 26px) rotate(180deg);
+  }
+}
+
+@-webkit-keyframes bulleDroite {
+  0% {
+    -webkit-transform: translate(0px, 1px) rotate(0deg);
+  }
+  37% {
+    -webkit-transform: translate(-125px, -27px) rotate(67deg);
+  }
+  61% {
+    -webkit-transform: translate(-205px, 33px) rotate(110deg);
+  }
+  78% {
+    -webkit-transform: translate(-142px, 56px) rotate(140deg);
+  }
+  100% {
+    -webkit-transform: translate(-59px, 26px) rotate(180deg);
+  }
+}
+
+@-o-keyframes bulleDroite {
+  0% {
+    -o-transform: translate(0px, 1px) rotate(0deg);
+  }
+  37% {
+    -o-transform: translate(-125px, -27px) rotate(67deg);
+  }
+  61% {
+    -o-transform: translate(-205px, 33px) rotate(110deg);
+  }
+  78% {
+    -o-transform: translate(-142px, 56px) rotate(140deg);
+  }
+  100% {
+    -o-transform: translate(-59px, 26px) rotate(180deg);
+  }
+}
+
+@-ms-keyframes bulleDroite {
+  0% {
+    -ms-transform: translate(0px, 1px) rotate(0deg);
+  }
+  37% {
+    -ms-transform: translate(-125px, -27px) rotate(67deg);
+  }
+  61% {
+    -ms-transform: translate(-205px, 33px) rotate(110deg);
+  }
+  78% {
+    -ms-transform: translate(-142px, 56px) rotate(140deg);
+  }
+  100% {
+    -ms-transform: translate(-59px, 26px) rotate(180deg);
+  }
+}
+
+.bulle-top {
+  animation: bulleTop linear 10s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+  -webkit-animation: bulleTop linear 10s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-transform-origin: 50% 50%;
+  -moz-animation: bulleTop linear 10s;
+  -moz-animation-iteration-count: infinite;
+  -moz-transform-origin: 50% 50%;
+  -o-animation: bulleTop linear 10s;
+  -o-animation-iteration-count: infinite;
+  -o-transform-origin: 50% 50%;
+  -ms-animation: bulleTop linear 10s;
+  -ms-animation-iteration-count: infinite;
+  -ms-transform-origin: 50% 50%;
+}
+
+@keyframes bulleTop {
+  0% {
+    transform: translate(1px, -1px);
+  }
+  21% {
+    transform: translate(47px, 32px);
+  }
+  41% {
+    transform: translate(75px, 21px);
+  }
+  60% {
+    transform: translate(66px, 9px);
+  }
+  80% {
+    transform: translate(29px, 5px);
+  }
+  100% {
+    transform: translate(29px, 5px);
+  }
+}
+
+@-moz-keyframes bulleTop {
+  0% {
+    -moz-transform: translate(1px, -1px);
+  }
+  21% {
+    -moz-transform: translate(47px, 32px);
+  }
+  41% {
+    -moz-transform: translate(75px, 21px);
+  }
+  60% {
+    -moz-transform: translate(66px, 9px);
+  }
+  80% {
+    -moz-transform: translate(29px, 5px);
+  }
+  100% {
+    -moz-transform: translate(29px, 5px);
+  }
+}
+
+@-webkit-keyframes bulleTop {
+  0% {
+    -webkit-transform: translate(1px, -1px);
+  }
+  21% {
+    -webkit-transform: translate(47px, 32px);
+  }
+  41% {
+    -webkit-transform: translate(75px, 21px);
+  }
+  60% {
+    -webkit-transform: translate(66px, 9px);
+  }
+  80% {
+    -webkit-transform: translate(29px, 5px);
+  }
+  100% {
+    -webkit-transform: translate(29px, 5px);
+  }
+}
+
+@-o-keyframes bulleTop {
+  0% {
+    -o-transform: translate(1px, -1px);
+  }
+  21% {
+    -o-transform: translate(47px, 32px);
+  }
+  41% {
+    -o-transform: translate(75px, 21px);
+  }
+  60% {
+    -o-transform: translate(66px, 9px);
+  }
+  80% {
+    -o-transform: translate(29px, 5px);
+  }
+  100% {
+    -o-transform: translate(29px, 5px);
+  }
+}
+
+@-ms-keyframes bulleTop {
+  0% {
+    -ms-transform: translate(1px, -1px);
+  }
+  21% {
+    -ms-transform: translate(47px, 32px);
+  }
+  41% {
+    -ms-transform: translate(75px, 21px);
+  }
+  60% {
+    -ms-transform: translate(66px, 9px);
+  }
+  80% {
+    -ms-transform: translate(29px, 5px);
+  }
+  100% {
+    -ms-transform: translate(29px, 5px);
+  }
+}

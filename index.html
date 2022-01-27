@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CLINIQUE</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="http://static-media.prawf.showroomprive.net/v4/common/css/style_v4.css?ver=0-0-21" />
+
+
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+
+
+</head>
+
+<body>
+
+    <div class="lp-clinique">
+
+
+        <!-- TOP CLINIQUE -->
+        <section id="top-clinique">
+
+            <div class="logo-position">
+                <img src="./logo_clinique.png" alt="CLINIQUE" class="logo-size" />
+            </div>
+
+            <div class="header-content">
+
+                <div class="flex-column-top-texte">
+                    <!-- exclu -->
+                    <div class="content-top-two">
+                        <div> <span> Exclusivité Showroomprivé </span>
+                            <br />
+                            pendant 48h seulement
+                        </div>
+                    </div>
+                    <!-- offre -->
+                    <div class="content-top-one">
+                        <div class="accroche">
+
+                            <div class="pourcentage">
+                                <p>-30%</p>
+                                <p>SUR L'ENSEMBLE <br /> DU SITE*</p>
+                            </div>
+
+                            <div class="plus">+</div>
+
+                            <div class="offre-clinique">
+                                <p> un mascara </p>
+                                <p> offert</p>
+                                <p>dès 60<sup>&euro;</sup>
+                                    d'achat</p>
+                            </div>
+
+                            <div class="mascara">
+                                <img src="./mascara.png" alt="Mascara" class="mascara-size" />
+                            </div>
+
+                            <div class="plus">+</div>
+
+                            <div class="livraison">
+                                <p> livraison offerte</p>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <!-- code -->
+                    <div class="content-top-three">
+                        <div>
+                            Avec le code
+                        </div>
+                        <div>
+                            <script>
+                                function copy(that) {
+                                    var inp = document.createElement('input');
+                                    document.body.appendChild(inp)
+                                    inp.value = that.textContent
+                                    inp.select();
+                                    document.execCommand('copy', false);
+                                    inp.remove();
+                                }
+                            </script>
+                           
+                            <p onclick="copy(this)" class="lp-header-offre-code pointer">SHOWROOM<img src="./copy.png" alt="" class="lp-header-copy-icon"></p>
+                            <p class="copie-colle">Cliquez sur l'icône pour copier le code</p>
+                            <p class="copie-colle-mobile">Touchez l'icône pour copier le code</p>
+
+
+                         
+                            <!-- <script> 
+                                function myFunction() {
+                                    /* Get the text field */
+                                    var copyText = document.getElementById("copier");
+                                    /* Select the text field */
+                                    copyText.select();
+                                    copyText.setSelectionRange(0, 99999); /* For mobile devices */
+                                    /* Copy the text inside the text field */
+                                    document.execCommand("copy"); 
+                                    // changer texte
+                                    var copieColle = document.getElementById("copie-colle");
+                                    copieColle.innerHTML = "Code copié !";
+      
+                                    var copieColleMobile = document.getElementById("copie-colle-mobile");
+                                    copieColleMobile.innerHTML ="Code copié !";
+                                }
+                            </script> -->
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="flex-column-top-visuel">
+                    <img src="./produits-header.png" alt="" class="pointer"
+                        onclick="redirectPartner('https://www.fr.clinique.com?utm_source=showroomprive&utm_campaign=alwayson_fy21&utm_content=banner_30off_showroomprive_prospects','CLINIQUE/CLINIQUE/VISUELHEADER')">
+                </div>
+            </div>
+
+
+            <div class="header-cta">
+                <button type="button" class="cta pointer"
+                    onclick="redirectPartner('https://www.fr.clinique.com?utm_source=showroomprive&utm_campaign=alwayson_fy21&utm_content=banner_30off_showroomprive_prospects','CLINIQUE/JENPROFITE1')">
+                    J'EN PROFITE
+                </button>
+            </div>
+
+
+
+            <img src="./bulle.png" alt="" class="bulle-header-one rotateIn bulle-top">
+            <img src="./bulle.png" alt="" class="bulle-header-two rotateIn bulle-top">
+            <img src="./bulle.png" alt="" class="bulle-header-three rotateIn bulle-top">
+            <img src="./bulle.png" alt="" class="bulle-header-four rotateIn bulle-droite">
+            <img src="./bulle.png" alt="" class="bulle-header-mobile">
+
+        </section>
+
+
+
+
+        <!-- TITRE  -->
+        <section id="titre-produits">
+            <div class="tiret one"></div>
+            <p data-aos="fade-up"> Nos 4 produits <br> <span> coup de coeur </span></p>
+            <div class="tiret two"></div>
+        </section>
+
+
+
+        <!-- MOISTURE -->
+        <section id="moisture">
+            <div class="titre-section-mobile"> Moisture Surge Intense </div>
+            <div class="content-section">
+                <div class="content-section-visuel" data-aos="fade-right">
+                    <img src="./moisture.png" alt="" class="pointer"
+                        onclick="redirectPartner('https://www.fr.clinique.com/product/1687/79628/soin/soin-hydratant/moisture-surge-intense-soin-hydro-relipidant-72h?utm_source=showroomprive&utm_campaign=alwayson_fy21&utm_content=banner_30off_showroomprive_prospects','CLINIQUE/IMGMOISTURESURGE')" />
+                </div>
+                <div class="prix-section" data-aos="fade-right">
+                    <p class="prix-valable-section"> 13,93 &euro;</p>
+                    <p class="prix-barre-section"> 19,90 &euro;</p>
+                </div>
+
+                <div class="content-section-texte" data-aos="fade-left">
+
+                    <p class="titre-section"> Moisture <br /> Surge Intense
+                    </p>
+                    <p class="sous-titre-section">Soin Hydro-relipidant 72H, le partenaire des peaux sèches et
+                        déshydratées.</p>
+                    <p class="paragraphe-section"> Cette crème-gel, à la texture riche et onctueuse, hydrate en
+                        profondeur et apaise la peau pour lui donner une apparence lisse, repulpée et lumineuse.
+                    </p>
+                    <div class="chiffres-section">
+                        <div class="note-section">
+                            <p> noté </p>
+                            <p> 4,9/5 </p>
+                        </div>
+                        <div class="reco-section">
+                            <p> 100% </p>
+                            <p> recommandent <br /> ce produit </p>
+                        </div>
+                    </div>
+                    <div class="cta-section pointer">
+                        <a
+                            onclick="redirectPartner('https://www.fr.clinique.com/product/1687/79628/soin/soin-hydratant/moisture-surge-intense-soin-hydro-relipidant-72h?utm_source=showroomprive&utm_campaign=alwayson_fy21&utm_content=banner_30off_showroomprive_prospects','CLINIQUE/JHYDRATE')">
+                            j’hydrate </a>
+                    </div>
+                </div>
+            </div>
+
+            <img src="./bulle.png" alt="" class="bulle-moisture rotateIn bulle-droite">
+
+        </section>
+
+
+
+        <!-- GEL -->
+        <section id="gel">
+            <div class="titre-section-mobile"> BB-gel </div>
+            <div class="content-section">
+                <div class="content-section-texte" data-aos="fade-right">
+                    <p class="titre-section"> BB-gel</p>
+                    <p class="sous-titre-section">L’alternative au fond de teint.
+                    </p>
+                    <p class="paragraphe-section">BB-Gel teinté universel.
+                        <br class="br-for-desktop"> Ce gel non gras unifie et perfectionne votre
+                        teint, quelle que soit la carnation de votre peau.
+                    </p>
+                    <div class="chiffres-section">
+                        <div class="note-section">
+                            <p> noté </p>
+                            <p> 4,6/5 </p>
+                        </div>
+                        <div class="reco-section">
+                            <p> 95% </p>
+                            <p> recommandent <br> ce produit </p>
+                        </div>
+                    </div>
+
+                    <div class="cta-section pointer">
+                        <a
+                            onclick="redirectPartner('https://www.fr.clinique.com/product/1687/70311/soin/soin-hydratant/bb-gel-teinte-universel?utm_source=showroomprive&utm_campaign=alwayson_fy21&utm_content=banner_30off_showroomprive_prospects','CLINIQUE/JUNIFIE')">
+                            J’unifie </a>
+                    </div>
+
+                </div>
+                <div class="content-section-visuel" data-aos="fade-left">
+                    <img src="./bb_gel.png" alt="" class="pointer"
+                        onclick="redirectPartner('https://www.fr.clinique.com/product/1687/70311/soin/soin-hydratant/bb-gel-teinte-universel?utm_source=showroomprive&utm_campaign=alwayson_fy21&utm_content=banner_30off_showroomprive_prospects','CLINIQUE/IMGBBGEL')" />
+                </div>
+                <div class="prix-section" data-aos="fade-left">
+                    <p class="prix-valable-section"> 19,25 &euro;</p>
+                    <p class="prix-barre-section">27,50 &euro; </p>
+                </div>
+            </div>
+
+            <img src="./bulle.png" alt="" class="bulle-gel rotateIn bulle-gauche">
+
+        </section>
+
+
+
+        <!-- SMART -->
+        <section id="smart">
+            <div class="titre-section-mobile"> Smart </div>
+            <div class="content-section">
+                <div class="content-section-visuel" data-aos="fade-right">
+                    <img src="./smart.png" alt="" class="pointer"
+                        onclick="redirectPartner('https://www.fr.clinique.com/product/1687/37483/soin/soin-hydratant/clinique-smarttm-creme-reparatrice-action-sur-mesure-spf-15?utm_source=showroomprive&utm_campaign=alwayson_fy21&utm_content=banner_30off_showroomprive_prospects','CLINIQUE/IMGSMART')" />
+                </div>
+                <div class="prix-section" data-aos="fade-right">
+                    <p class="prix-valable-section"> 53,20 &euro; </p>
+                    <p class="prix-barre-section"> 76 &euro; </p>
+                </div>
+                <div class="content-section-texte" data-aos="fade-left">
+                    <p class="titre-section">Smart</p>
+                    <p class="sous-titre-section"> L’hydratant qui lutte contre les 4 signes
+                        de l’âge.</p>
+                    <p class="paragraphe-section">
+                        Un soin hydratant intelligent qui agit sur les rides, la fermeté, l'éclat et les irrégularités
+                        du teint, là où la peau en a besoin, quand elle en a besoin.
+                    </p>
+                    <div class="chiffres-section">
+                        <div class="note-section">
+                            <p> noté </p>
+                            <p> 4,6/5 </p>
+                        </div>
+                        <div class="reco-section">
+                            <p> 94% </p>
+                            <p> recommandent <br> ce produit </p>
+                        </div>
+                    </div>
+
+
+                    <div class="cta-section pointer">
+                        <a
+                            onclick="redirectPartner('https://www.fr.clinique.com/product/1687/37483/soin/soin-hydratant/clinique-smarttm-creme-reparatrice-action-sur-mesure-spf-15?utm_source=showroomprive&utm_campaign=alwayson_fy21&utm_content=banner_30off_showroomprive_prospects','CLINIQUE/JERAJEUNIS')">Je
+                            rajeunis </a>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <img src="./bulle.png" alt="" class="bulle-smart rotateIn bulle-droite">
+        </section>
+
+
+
+        <!-- EYES  -->
+        <section id="eyes">
+            <div class="titre-section-mobile"> All About Eyes </div>
+            <div class="content-section">
+                <div class="content-section-texte" data-aos="fade-right">
+                    <p class="titre-section">All About Eyes </p>
+                    <p class="sous-titre-section">L’allié pour estomper vos cernes. </p>
+                    <p class="paragraphe-section">
+                        Un contour des yeux à la texture légère qui atténue l'apparence des poches et des cernes.
+                        <br class="br-for-desktop">
+                        Favorise la tenue du maquillage.
+                    </p>
+                    <div class="chiffres-section">
+                        <div class="note-section">
+                            <p> noté </p>
+                            <p> 4,8/5 </p>
+                        </div>
+                        <div class="reco-section">
+                            <p> 94% </p>
+                            <p> recommandent <br> ce produit </p>
+                        </div>
+                    </div>
+
+
+                    <div class="cta-section pointer">
+                        <a
+                            onclick="redirectPartner('https://www.fr.clinique.com/product/20779/4769/soins/yeux-levres/all-about-eyestm-soin-yeux-anti-poches-anti-cernes?utm_source=showroomprive&utm_campaign=alwayson_fy21&utm_content=banner_30off_showroomprive_prospects','CLINIQUE/JILLUMINE')">
+                            j’illumine </a>
+                    </div>
+                </div>
+                <div class="content-section-visuel" data-aos="fade-left">
+                    <img src="./eyes.png" alt="" class="pointer"
+                        onclick="redirectPartner('https://www.fr.clinique.com/product/20779/4769/soins/yeux-levres/all-about-eyestm-soin-yeux-anti-poches-anti-cernes?utm_source=showroomprive&utm_campaign=alwayson_fy21&utm_content=banner_30off_showroomprive_prospects','CLINIQUE/IMGALLABOUTEYES')" />
+                </div>
+                <div class="prix-section" data-aos="fade-left">
+                    <p class="prix-valable-section"> 28 &euro;</p>
+                    <p class="prix-barre-section"> 40 &euro;</p>
+                </div>
+            </div>
+
+            <img src="./bulle.png" alt="" class="bulle-eyes rotateIn bulle-gauche">
+
+        </section>
+
+
+
+        <!-- MASCARA -->
+        <section id="mascara">
+
+            <div class="mascara-titre">
+                <div class="tiret one"></div>
+                <div class="titre-texte" data-aos="fade-up">
+                    <p>Un mascara <span> offert</span></p>
+                    <p>exclusivité showroomprivé</p>
+                    <p>dès 60€ d’achat</p>
+                </div>
+                <div class="tiret two"></div>
+            </div>
+
+            <div class="mascara-presentation">
+                <div class="item-one" data-aos="fade-right">
+                    <img src="./femme.png" alt="">
+                </div>
+                <div class="item-two" data-aos="fade-up">
+                    <figure>
+                        <img src="./mascara.png" alt="">
+                        <figcaption class="for-desktop"> <strong>HIGH IMPACT<sup>TM</sup></strong>
+                            <br />
+                            Mascara Impact
+                            <br />
+                            Optimal <strong>d’une
+                                <br />
+                                valeur de 25,50€. </strong>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <div class="for-mobile" data-aos="fade-up">
+                    <strong>HIGH IMPACT<sup>TM</sup></strong>
+                    <br />
+                    Mascara Impact Optimal <strong>
+                        <br />
+                        d’une valeur de 25,50€. </strong>
+
+                </div>
+                <div class="item-three" data-aos="fade-left">
+                    <p> Résultat spectaculaire instantané. Étoffe, sublime et allonge les cils en un seul geste. Sa
+                        couleur pure et intense sublime votre regard. Portez-le une seule fois et vous aurez
+                        l'impression d'être nue sans lui. Soumis à des tests d'ophtalmologie.</p>
+                    <p> <strong> Qu’est-ce que c’est ?</strong></p>
+                    <p> Une formule testée ophtalmologiquement qui convient aux porteuses de lentilles et aux yeux
+                        sensibles.</p>
+                    <p> <strong>Ce qu’il fait ? </strong> </p>
+                    <p>Des cils étoffés, allongés et sublimés pour un regard spectaculaire.</p>
+                </div>
+
+            </div>
+
+
+            <div class="item-three-mobile-slider">
+                <p> <strong> Résultat spectaculaire instantané. </strong>
+                    <br />
+                    Étoffe, sublime et allonge les cils en un seul geste. Sa
+                    couleur pure et intense sublime votre regard. Portez-le une seule fois et vous aurez
+                    l'impression d'être nue sans lui. Soumis à des tests d'ophtalmologie.
+                </p>
+                <p> <strong> Qu’est-ce que c’est ?</strong>
+                    <br />
+                    Une formule testée ophtalmologiquement qui convient aux porteuses de lentilles et aux yeux
+                    sensibles.
+                </p>
+
+                <p> <strong>Ce qu’il fait ? </strong>
+                    <br />
+                    Des cils étoffés, allongés et sublimés pour un regard spectaculaire.
+                </p>
+            </div>
+
+
+
+            <div class="cta-position">
+                <a class="cta pointer"
+                    onclick="redirectPartner('https://www.fr.clinique.com?utm_source=showroomprive&utm_campaign=alwayson_fy21&utm_content=banner_30off_showroomprive_prospects','CLINIQUE/JEFONCE')">
+                    JE FONCE </a>
+            </div>
+
+        </section>
+
+
+
+        <!-- CONDITIONS  -->
+        <section id="conditions">
+
+            <div class="conditions-flex">
+
+                <div class="conditions-item" data-aos="fade-up">
+                    <div class="icone">
+                        <img src="./picto3.png" alt="">
+                    </div>
+
+                    <div class="texte-conditions">
+                        <p> LIVRAISON GRATUITE.</p>
+                        <p> POUR TOUTE COMMANDE.</p>
+                    </div>
+                </div>
+
+                <div class="conditions-item" data-aos="fade-up">
+                    <div class="icone">
+                        <img src="./picto2.png" alt="">
+                    </div>
+                    <div class="texte-conditions">
+                        <p> MINIATURES OFFERTES.</p>
+                        <p> POUR TOUTE COMMANDE.</p>
+                    </div>
+                </div>
+
+                <div class="conditions-item" data-aos="fade-up">
+                    <div class="icone">
+                        <img src="./picto1.png" alt="">
+                    </div>
+                    <div class="texte-conditions">
+                        <p> RETOURS GRATUITS.</p>
+                        <p> SUR LES FONDS DE TEINT,
+                            <br class="br-for-desktop">
+                            POUDRES ET CORRECTEURS.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+    </div>
+
+
+
+
+
+    <!-- BANDEAU -->
+    <section id="bandeau-clinique" class="pointer">
+        <div class="content-bandeau">
+            <div class="content-bandeau-one">
+                <div class="pourcentage">
+                    <p>-30%</p>
+                    <p>SUR L'ENSEMBLE <br /> DU SITE*
+                    </p>
+                </div>
+
+                <div class="plus">
+                    +
+                </div>
+
+                <div class="offre-clinique">
+                    <div class="offre-row">
+                        <div class="offre-column">
+                            <p> un mascara </p>
+                            <p> offert</p>
+                            <p>dès 60<sup>&euro;</sup> d'achat</p>
+                        </div>
+                        <img src="./mascara.png" alt="">
+                    </div>
+                </div>
+
+                <div class="plus">
+                    +
+                </div>
+
+                <div class="livraison">
+                    <p>livraison
+                        <br />
+                        offerte
+                    </p>
+                </div>
+
+            </div>
+            <div class="content-bandeau-two">
+                <div class="code">
+                    <p>avec le code</p>
+                    <p>SHOWROOM</p>
+                </div>
+
+                <div class="cta">
+                    <a class="pointer"
+                        onclick="redirectPartner('https://www.fr.clinique.com?utm_source=showroomprive&utm_campaign=alwayson_fy21&utm_content=banner_30off_showroomprive_prospects','CLINIQUE/STICKY')">
+                        J'EN PROFITE</a>
+                </div>
+
+                <div class="chevron">
+                    <img src="./chevron.png" alt="" class="pointer"
+                        onclick="redirectPartner('https://www.fr.clinique.com?utm_source=showroomprive&utm_campaign=alwayson_fy21&utm_content=banner_30off_showroomprive_prospects','CLINIQUE/STICKY')">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+    <!-- A LA UNE LOGOS -->
+    <section id="logos">
+
+        <div class="flex-logos">
+            <img src="./alaune.png" alt="">
+            <img src="./logo_clinique.png" alt="">
+        </div>
+
+        <div class="ml"> *Offre valable de 18/06 au 20/06 inclus sur <a href="https://www.fr.clinique.com/"
+                target="_blank"> clinique.fr</a> dans la limite des stocks disponibles.
+            Non cumulable avec les offres et promotions en cours ou nos offres permanantes. </div>
+    </section>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+
+    <script>
+        $(document).ready(function () {
+            // AOS Animation
+            $(function () {
+                AOS.init({
+                    duration: 1000,
+                });
+            });
+
+            // bandeau
+            window.onscroll = function () {
+                myFunction();
+            };
+            var bandeau = document.getElementById("bandeau-clinique");
+            var sticky = bandeau.offsetTop;
+            function myFunction() {
+                if (window.pageYOffset >= 50) {
+                    bandeau.classList.add("sticky");
+                } else {
+                    bandeau.classList.remove("sticky");
+                }
+            }
+        });
+    </script>
+
+
+
+
+    <!-- SLIDER MASCARA MOBILE -->
+    <script>
+        $(document).ready(function () {
+            $('.item-three-mobile-slider').slick({
+                slidesToShow: 1,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                infinite: true,
+                dots: true,
+                arrows: true,
+                swipe: true,
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
